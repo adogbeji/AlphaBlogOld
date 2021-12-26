@@ -6,4 +6,10 @@ class ArticlesController < ApplicationController
     def index
         @articles = Article.all  # Saves all articles in database table
     end
+
+    def new
+    end
+
+    def create
+    end
 end
