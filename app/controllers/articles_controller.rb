@@ -15,6 +15,8 @@ class ArticlesController < ApplicationController
         @article = Article.new(params.require(:article).permit(:title, :description))
         
         if @article.save
+          flash[:notice] = 'Article was created successfully!'
+
         # redirect_to article_path(@article)  # Original redirect code
           redirect_to @article  # Redirect shortcut 
         else
