@@ -30,5 +30,6 @@ class ArticlesController < ApplicationController
     end
 
     def update
+      @article = Article.find(params[:id])  # Finds the article to be edited by ID
     end
 end
