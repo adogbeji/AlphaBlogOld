@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     end
 
     def edit
+      @article = Article.find(params[:id])  # Finds article based on ID
     end
 
     def create
