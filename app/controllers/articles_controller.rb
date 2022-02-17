@@ -53,4 +53,8 @@ class ArticlesController < ApplicationController
     def set_article
       @article = Article.find(params[:id])  # Finds article based on ID
     end
+
+    def article_params
+      params.require(:article).permit(:title, :description)
+    end
 end
